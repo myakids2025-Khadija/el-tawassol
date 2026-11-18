@@ -4,7 +4,7 @@
 const I18N = {
   ar: {
     dir: 'rtl', langName: 'العربية',
-    brand: 'أكاديمية التواصل', brandShort: 'El Tawassol',
+    brand: 'منصة التواصل', brandShort: 'El Tawassol',
     tagline: 'تمكين معرفي متكامل للصم وضعاف السمع',
     nav_home: 'الرئيسية', nav_about: 'من نحن؟', nav_courses: 'الدورات', nav_channel: 'تعلّم لغة الإشارة',
     nav_faq: 'الأسئلة الشائعة', nav_contact: 'تواصل معنا', nav_join: 'كن معلماً',
@@ -51,7 +51,7 @@ const I18N = {
   },
   fr: {
     dir: 'ltr', langName: 'Français',
-    brand: 'El Tawassol Academy', brandShort: 'El Tawassol',
+    brand: 'El Tawassol', brandShort: 'El Tawassol',
     tagline: 'Autonomisation éducative complète pour les sourds et malentendants',
     nav_home: 'Accueil', nav_about: 'Qui sommes-nous ?', nav_courses: 'Formations', nav_channel: 'Apprendre la langue des signes',
     nav_faq: 'FAQ', nav_contact: 'Contact', nav_join: 'Devenir enseignant',
@@ -98,7 +98,7 @@ const I18N = {
   },
   en: {
     dir: 'ltr', langName: 'English',
-    brand: 'El Tawassol Academy', brandShort: 'El Tawassol',
+    brand: 'El Tawassol', brandShort: 'El Tawassol',
     tagline: 'Complete educational empowerment for the deaf and hard of hearing',
     nav_home: 'Home', nav_about: 'About us', nav_courses: 'Courses', nav_channel: 'Learn sign language',
     nav_faq: 'FAQ', nav_contact: 'Contact', nav_join: 'Become a teacher',
@@ -156,7 +156,7 @@ Object.assign(I18N.ar, {
   s2_eyebrow: 'التعلم من المنزل بكل سهولة', s2_title: 'تعلّم أينما كنت وطوّر مهاراتك', s2_sub: 'محتوى تعليمي مخصص يمكّن أطفالنا من استيعاب الدروس بطرق بصرية وتفاعلية.',
   s3_eyebrow: 'أساتذة متخصصون', s3_title: 'أساتذة يتقنون لغة الإشارة من الابتدائي إلى الثانوي', s3_sub: 'اختر أستاذك بنفسك واحصل على متابعة شخصية ودروس خصوصية عن بُعد.',
   services_kicker: 'خدماتنا', services_title: 'خدماتنا التعليمية',
-  about_kicker: 'من نحن', about_title: 'مرحباً بكم في أكاديمية التواصل',
+  about_kicker: 'من نحن', about_title: 'مرحباً بكم في منصة التواصل',
   about_p1: 'منصة تعليمية مبتكرة تهدف إلى تقديم محتوى تعليمي مميز لتلاميذ الأطوار الثلاثة، مع تركيز خاص على التلاميذ الصم وضعاف السمع والبكم الذين يحتاجون إلى دعم بلغة الإشارة.',
   about_p2: 'نقدم دروساً مصوّرة مترجمة، ملخصات PDF، ألعاباً تعليمية، واختبارات تساعدك على اجتياز المستويات، مع مرافقة نفسية وأرطفونية لأطفالنا.',
   about_l1: 'أساتذة محترفون', about_l2: 'دروس عبر الإنترنت', about_l3: 'مواد تعليمية تفاعلية', about_l4: 'تدريس مخصص حسب احتياجاتك',
@@ -169,7 +169,7 @@ Object.assign(I18N.fr, {
   s2_eyebrow: 'Apprendre facilement depuis la maison', s2_title: 'Apprenez où que vous soyez', s2_sub: 'Un contenu adapté qui permet à nos enfants de comprendre les cours de façon visuelle et interactive.',
   s3_eyebrow: 'Des enseignants spécialisés', s3_title: 'Des enseignants qui maîtrisent la langue des signes', s3_sub: 'Choisissez votre enseignant et bénéficiez d’un suivi personnalisé et de cours particuliers.',
   services_kicker: 'Services', services_title: 'Nos services éducatifs',
-  about_kicker: 'Qui sommes-nous', about_title: 'Bienvenue à El Tawassol Academy',
+  about_kicker: 'Qui sommes-nous', about_title: 'Bienvenue sur El Tawassol',
   about_p1: 'Une plateforme innovante offrant un contenu de qualité aux élèves des trois cycles, avec une attention particulière aux élèves sourds, malentendants et muets.',
   about_p2: 'Cours vidéo traduits, résumés PDF, jeux éducatifs et tests pour progresser, avec un accompagnement psychologique et orthophonique.',
   about_l1: 'Enseignants professionnels', about_l2: 'Cours en ligne', about_l3: 'Supports interactifs', about_l4: 'Enseignement personnalisé',
@@ -182,7 +182,7 @@ Object.assign(I18N.en, {
   s2_eyebrow: 'Learn easily from home', s2_title: 'Learn anywhere and grow your skills', s2_sub: 'Tailored content that helps our children understand lessons visually and interactively.',
   s3_eyebrow: 'Specialized teachers', s3_title: 'Teachers fluent in sign language, from primary to secondary', s3_sub: 'Choose your own teacher and get personal follow-up and remote private lessons.',
   services_kicker: 'Services', services_title: 'Our educational services',
-  about_kicker: 'About us', about_title: 'Welcome to El Tawassol Academy',
+  about_kicker: 'About us', about_title: 'Welcome to El Tawassol',
   about_p1: 'An innovative platform delivering quality content to students of all three stages, with a special focus on deaf, hard-of-hearing and mute students.',
   about_p2: 'Interpreted video lessons, PDF summaries, educational games and tests to level up, plus psychological & speech-therapy support.',
   about_l1: 'Professional teachers', about_l2: 'Online lessons', about_l3: 'Interactive materials', about_l4: 'Personalized teaching',
