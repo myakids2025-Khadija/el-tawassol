@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="التواصل للأطفال - منصة تعليمية تفاعلية لأطفال الصم والبكم بلغة الإشارة" />
+  <title>التواصل للأطفال | منصة تعليمية للأطفال الصم والبكم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/home" class="brand" aria-label="الصفحة الرئيسية">
+      <img class="brand-logo-img" src="../assets/tawassol-mark.png" alt="El Tawassol" />
+      <span class="brand-name">التواصل للأطفال</span>
+    </a>
+    <div class="topbar-right">
+      <a href="../index.html" class="profile-chip" title="العودة إلى أكاديمية التواصل">🎓 <span>El Tawassol</span></a>
+      <div class="stars-badge" id="starsBadge" title="نجومي">⭐ <span id="starsCount">0</span></div>
+      <a href="#/profiles" class="profile-chip" id="profileChip" title="تغيير الطفل">
+        <span id="profileAvatar">👤</span>
+        <span id="profileName">اختر طفلاً</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <nav class="bottomnav" aria-label="القائمة الرئيسية">
+    <a href="#/home"     data-nav="home"><span>🏠</span><small>الرئيسية</small></a>
+    <a href="#/letters"  data-nav="letters"><span>🔤</span><small>الحروف</small></a>
+    <a href="#/numbers"  data-nav="numbers"><span>🔢</span><small>الأرقام</small></a>
+    <a href="#/vocab"    data-nav="vocab"><span>📚</span><small>المفردات</small></a>
+    <a href="#/games"    data-nav="games"><span>🎮</span><small>الألعاب</small></a>
+    <a href="#/progress" data-nav="progress"><span>📊</span><small>التقدم</small></a>
+    <a href="#/settings" data-nav="settings"><span>⚙️</span><small>الإعدادات</small></a>
+  </nav>
+
+  <!-- نافذة عرض العنصر (الإشارة + الكلمة + الصورة) -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="إغلاق">✖</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- تغذية راجعة بصرية (بديلة عن الصوت) -->
+  <div class="feedback" id="feedback" aria-live="assertive" hidden></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/media.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
