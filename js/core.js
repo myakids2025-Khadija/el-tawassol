@@ -10,7 +10,7 @@ const yearLabel = (stage, year) =>
   : State.lang === 'en' ? `${stageName(stage)} – Year ${year}`
   : `السنة ${year} ${stageName(stage)}`;
 const fmtDA = n => n.toLocaleString('fr-DZ') + ' دج';
-const BASE_URL = 'https://el-tawassol.web.app';
+const BASE_URL = 'https://myakids2025-khadija.github.io/el-tawassol/';
 
 function toast(msg, type = 'ok') {
   const el = document.createElement('div');
