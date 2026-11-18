@@ -436,28 +436,44 @@ Views.register = (v, params) => {
   draw();
 };
 
+/* حسابات تجريبية (مؤقتة إلى حين ربط الخادم وقاعدة البيانات) */
+const DEMO_ACCOUNTS = {
+  eleve: { pass: '1234', role: 'student' },
+  prof:  { pass: '1234', role: 'teacher' },
+  psy:   { pass: '1234', role: 'psy' },
+  admin: { pass: '1234', role: 'admin' },
+};
+
 Views.login = v => {
-  const roles = [['student', '🧑‍🎓', 'تلميذ'], ['teacher', '🧑‍🏫', 'أستاذ'], ['psy', '🧠', 'أخصائي نفساني / أرطفوني'], ['admin', '🛡️', 'صاحب المنصة']];
   v.innerHTML = `
   <section class="page auth">
     <div class="auth-wrap">
     <div class="auth-photo" style="background-image:url('assets/photos/hero-1.jpg')"><div><h2>${t('s2_title')}</h2><p>${t('s2_sub')}</p></div></div>
-    <form class="card auth-card" id="loginForm">
+    <form class="card auth-card" id="loginForm" autocomplete="off">
       <div class="center">${logoHTML()}</div>
       <h1>${t('login')}</h1>
-      <div class="role-tabs">${roles.map(([r, e, n], i) => `<label><input type="radio" name="role" value="${r}" ${i === 0 ? 'checked' : ''}/><span>${e}<small>${n}</small></span></label>`).join('')}</div>
-      <label>User name<input name="user" dir="ltr" placeholder="amine.bouzid" /></label>
-      <label>Password<input name="pass" type="password" dir="ltr" placeholder="••••••••" /></label>
+      <label>User name<input name="user" dir="ltr" placeholder="User name" required autocapitalize="none" /></label>
+      <label>Password
+        <span class="pass-wrap"><input name="pass" type="password" dir="ltr" placeholder="••••" required /><button type="button" class="pass-eye" id="passEye" aria-label="show">👁️</button></span>
+      </label>
+      <div class="alert bad" id="loginErr" hidden>❌ اسم المستخدم أو كلمة المرور غير صحيحة</div>
       <button class="btn btn-primary btn-lg">🔑 ${t('login')}</button>
-      <p class="muted small center">🧪 نسخة تجريبية: اختر نوع الحساب ثم اضغط دخول (بدون كلمة مرور).</p>
       <p class="center">ليس لديك حساب؟ <a href="#/register">${t('register')}</a></p>
     </form>
     </div>
   </section>`;
+  $('#passEye').onclick = () => { const i = $('[name=pass]'); i.type = i.type === 'password' ? 'text' : 'password'; };
   $('#loginForm').onsubmit = e => {
     e.preventDefault();
-    const role = new FormData(e.target).get('role');
-    State.login(role);
-    location.hash = role === 'student' ? '#/student' : '#/' + role;
+    const fd = new FormData(e.target);
+    const acc = DEMO_ACCOUNTS[String(fd.get('user')).trim().toLowerCase()];
+    if (!acc || acc.pass !== fd.get('pass')) {
+      $('#loginErr').hidden = false;
+      e.target.classList.remove('shake'); void e.target.offsetWidth; e.target.classList.add('shake');
+      if (navigator.vibrate) navigator.vibrate(200);
+      return;
+    }
+    State.login(acc.role);
+    location.hash = acc.role === 'student' ? '#/student' : '#/' + acc.role;
   };
 };
